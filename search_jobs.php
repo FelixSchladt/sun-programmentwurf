@@ -3,48 +3,8 @@
 <head>
     <title>Stellenanzeigen</title>
     <meta charset="UTF-8">
-    <meta charset="UTF-8">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: white;
-            color: black;
-            margin: 0;
-            padding: 0;
-        }
-        .header, .footer {
-            background-color: #004d00; /* Dark Green */
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-        }
-        .container {
-            padding: 20px;
-        }
-        .search-form {
-            margin-bottom: 20px;
-        }
-        .job {
-            margin-bottom: 15px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .nav {
-            background-color: #009900; /* Light Green */
-            padding: 10px 0;
-            text-align: center;
-        }
-        .nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-        }
-        .nav a:hover {
-            background-color: #006600;
-        }
- 
-    </style>
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
