@@ -30,7 +30,7 @@
     <?php
     $searchTerm = isset($_POST['search']) ? $_POST['search'] : '';
 
-    $dbPath = 'jobs.db';
+    $dbPath = '/opt/db/jobs.db';
     $db = new SQLite3($dbPath);
 
     //Faulty SQL Injection vulnerable query
