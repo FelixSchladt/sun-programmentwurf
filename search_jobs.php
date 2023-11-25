@@ -3,7 +3,7 @@
 <head>
     <title>Stellenanzeigen</title>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
