@@ -28,19 +28,23 @@
     </div>
 
     <?php
-    // Setzen Sie $searchTerm auf den gesendeten Wert oder auf einen leeren String
     $searchTerm = isset($_POST['search']) ? $_POST['search'] : '';
 
-    // Datenbankverbindung
     $dbPath = 'jobs.db';
     $db = new SQLite3($dbPath);
 
-    // Datenbankabfrage, die immer ausgeführt wird
-    $query = "SELECT * FROM Jobs WHERE JobTitle LIKE '%$searchTerm%'";
+    //Faulty SQL Injection vulnerable query
+    $query = "SELECT * FROM Jobs WHERE JobTitle LIKE '%$searchTerm%'"; 
 
     $results = $db->query($query);
 
-    // Ergebnisse anzeigen
+    // Proper prepared Statement against SQL injection attacks
+    /*
+        $query = $db->prepare("SELECT * FROM Jobs WHERE JobTitle LIKE :search");
+        $query->bindValue(':search', $searchTerm, SQLITE3_STRING);
+        $results = $query->execute();
+     */
+
     if ($results) {
         while ($row = $results->fetchArray()) {
             echo "<div class='job'>";
@@ -53,7 +57,6 @@
         echo "Keine Jobs gefunden.";
     }
 
-    // Schließen der Datenbankverbindung
     $db->close();
     ?>
 </div>
